@@ -1,5 +1,8 @@
 WebsiteTEST::Application.routes.draw do
 
+  devise_for :admins
+  get "admins/new"
+
   root 'pages#index'
   
   match '/signup',          to: 'admins#new',             via: 'get'
